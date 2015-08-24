@@ -11,7 +11,31 @@
 |
 */
 
-Route::get('/', function()
+Route::resource('posts', 'PostsController');
+
+
+Route::get('/', 'HomeController@showWelcome');
+
+Route::get('resume', 'HomeController@showResume');
+
+Route::get('portfolio', 'HomeController@showPortfolio');
+
+Route::get('boxmodel', 'HomeController@showBoxModel');
+
+Route::get('whackamole', 'HomeController@whackamole');
+
+Route::get('calculator', 'HomeController@calculator');
+
+Route::get('toolshed', 'HomeController@showTools');
+
+
+Route::get('form', function()
 {
-	return View::make('hello');
+    return View::make('form');
 });
+
+Route::post('form', function()
+{
+    return var_dump(Input::all());
+});
+
