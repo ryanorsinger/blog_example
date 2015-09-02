@@ -1,0 +1,24 @@
+body {
+    background-color: $gray-color;
+}
+
+
+
+p {
+    @if $type == ocean {
+        color: blue;
+    } @else if $type == matador {
+        color: red;
+    } @else if $type == monster {
+        color: green;
+    } @else pcolor: black;
+}
+.some-class {
+    border: 1px solid #f00;
+    background-color: #fdd
+}
+
+.another-class {
+    @extend .some-class;
+    border-width: 3px;
+}

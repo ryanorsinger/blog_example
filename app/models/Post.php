@@ -9,6 +9,8 @@ class Post extends Eloquent
         'body'       => 'required|max:10000'
     );
 
-    protected $guarded = array('id', 'title', 'body');
-
+    public function user()
+    {
+        return $this->belongsTo('User');
+    }
 }

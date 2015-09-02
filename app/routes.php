@@ -13,6 +13,9 @@
 
 Route::resource('posts', 'PostsController');
 
+Route::get('tags', function() {
+    return View::make('tags');
+});
 
 Route::get('/', 'HomeController@showWelcome');
 
@@ -27,6 +30,7 @@ Route::get('whackamole', 'HomeController@whackamole');
 Route::get('calculator', 'HomeController@calculator');
 
 Route::get('toolshed', 'HomeController@showTools');
+
 
 
 Route::get('form', function()

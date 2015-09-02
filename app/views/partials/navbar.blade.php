@@ -35,11 +35,12 @@
       </ul>
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="text" name="search" class="form-control" placeholder="Search">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
+        <li><img src="/img/74pxPolygons.jpg" alt=""></li>
         <li><a href="#">Link</a></li>
       </ul>
     </div>
