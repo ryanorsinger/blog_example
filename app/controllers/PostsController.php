@@ -120,6 +120,16 @@ class PostsController extends \BaseController {
 
 		$post->title = Input::get('title');
 		$post->body = Input::get('body');
+
+		if(Input::hasFile('image')) {
+
+			$file = Input::get('image');
+			$filename = $file->getClientOriginalName();
+			$image_url = $file->move('img/', $fileName);
+
+		}
+
+
 		$post->save();
 
 		return Redirect::action('PostsController@index');
